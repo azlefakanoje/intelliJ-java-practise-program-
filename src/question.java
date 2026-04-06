@@ -2,14 +2,16 @@
 class ThreadA extends Thread{
     public void run(){
         int count=0;
-        for(int i=2;i<=50;i=i+2)
-            System.out.println("Even Thread:"+i);
-        count++;
-        if(count % 3==0){
-            try{
-                Thread.sleep(500);
-            }catch(Exception e){
-                System.out.println(e);
+        for(int i=2;i<=50;i=i+2){
+            System.out.println("even Thread:"+i);
+            count++;
+            if(count%3==0){
+                try {
+                    Thread.sleep(500);
+                }catch(Exception e){
+                    System.out.println(e);
+
+                }
             }
         }
     }
